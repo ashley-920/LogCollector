@@ -84,7 +84,7 @@ echo Start to collect Network Config
 echo =================== IPConfig =================== >> .\%foldername%\net_config.txt
 ipconfig /all >> .\%foldername%\net_config.txt
 echo =================== NetState =================== >> .\%foldername%\net_config.txt
-netstat -n -a >> .\%foldername%\net_config.txt
+netstat -n -a -o >> .\%foldername%\net_config.txt
 echo =================== Route =================== >> .\%foldername%\net_config.txt
 route PRINT >> .\%foldername%\net_config.txt
 echo =================== ARP =================== >> .\%foldername%\net_config.txt
