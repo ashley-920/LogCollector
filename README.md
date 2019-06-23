@@ -19,3 +19,5 @@ win64dd.exe (http://www.e5hforensics.com/memoryanalysis.com/acquisition_tools.ht
 
 win64dd.sys (http://www.e5hforensics.com/memoryanalysis.com/acquisition_tools.htm)
 
+# Preview
+![](exe2.gif)
