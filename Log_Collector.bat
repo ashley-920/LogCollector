@@ -58,7 +58,22 @@ echo =================== Net Share =================== >> .\%foldername%\net.txt
 net share >> .\%foldername%\net.txt
 echo =================== Net View =================== >> .\%foldername%\net.txt
 net view >> .\%foldername%\net.txt
-echo Finished collect net Information
+echo Finished collect net view Information
+echo =================== Net Use =================== >> 
+.\%foldername%\net.txt
+net use >> .\%foldername%\net.txt
+echo Finished collect net use Information
+
+echo =================== dir =================== >> 
+.\%foldername%\dir.txt
+dir /a  >> .\%foldername%\dir.txt
+
+
+echo =================== scheduler =================== >> 
+.\%foldername%\scheduler.txt
+schtasks >> .\%foldername%\scheduler.txt
+at >> .\%foldername%\scheduler.txt
+
 
 echo Start to collect TCPView Log
 Tcpvcon.exe -c >> .\%foldername%\tcpview_log.txt
@@ -82,7 +97,9 @@ autoruns.exe -a .\%foldername%\autorun.arn
 echo Finish collect Registry Key info
 
 echo Start to collect Event Log
-psloglist.exe -s >> .\%foldername%\event_log.txt
+psloglist.exe -s security >> .\%foldername%\event_log.txt
+psloglist.exe -s system >> .\%foldername%\event_log.txt
+psloglist.exe -s application >> .\%foldername%\event_log.txt
 echo Finished collecting Event Log
 
 echo Start to collect Process Info
